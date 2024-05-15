@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +25,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-
         }
 
         header {
@@ -79,7 +79,7 @@
 
         <!-- PERSONAL DETAILS -->
 
-        <form action="#" method="POST" class="space-y-4">
+        <form action="apply.php" method="POST" class="space-y-4">
             <h2 class="text-x font-bold mb-2">PERSONAL DETAILS</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -105,7 +105,7 @@
                     <input id="last_name" type="text" name="last_name" class="form-input w-full">
                 </div>
                 <div>
-                    <label for="gender" class="block font-medium">Which of the following best describes you?</label>
+                    <label for="gender" class="block font-medium">Gender</label>
                     <div class="mt-1">
                         <input type="radio" id="male" name="gender" value="male" class="form-radio">
                         <label for="male" class="ml-2">Male</label>
@@ -152,8 +152,9 @@
                     <input id="phone" type="tel" name="phone" class="form-input w-full">
                 </div>
                 <div>
-                    <label for="other_phone" class="block font-medium">Other phone</label>
-                    <input id="other_phone" type="tel" name="other_phone" class="form-input w-full">
+                    <label for="other_phone" class="block font-medium">Other Phone</label>
+                    <input id="other_phone" type="tel" name="other_phone" class="form-input w```html
+                    -full">
                 </div>
                 <div>
                     <label for="email" class="block font-medium">Email</label>
@@ -217,12 +218,11 @@
                     <label for="hourly_pay" class="block font-medium">Hourly Pay?</label>
                     <input id="hourly_pay" type="text" name="hourly_pay" class="form-input w-full">
                 </div>
-
-                <!-- OTHER SECTIONS -->
-                <!-- Add other sections here -->
+<br>
                 <!-- DRIVING HISTORY -->
                 <h2 class="text-xl font-bold mb-2 mt-8">DRIVING HISTORY</h2>
-
+<br>
+                <!-- Driving License -->
                 <div>
                     <label for="driving_license" class="block font-medium">Driving License</label>
                     <select id="driving_license" name="driving_license" class="form-input w-full">
@@ -230,175 +230,141 @@
                         <option value="no">No</option>
                     </select>
                 </div>
-                <!-- Add other driving history fields -->
-            
 
-            <div>
-                <p>Have you received any convictions, cautions, reprimands or final warnings that are not ‘protected’ as
-                    defined by the Rehabilitation of Offenders Act 1974 (Exceptions) Order 1975(as amended in 2013 by SI
-                    210 1198)?
-                </p>
-                <label for="driving_license" class="block font-medium">What is your answer?</label>
-                <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-            <!-- Add other driving history fields -->
+                <!-- Criminal Record questions -->
+                <div>
+                    <label for="criminal_record" class="block font-medium">Have you received any convictions, cautions,
+                        reprimands or final warnings that are not 'protected' as defined by the Rehabilitation of
+                        Offenders Act 1974 (Exceptions) Order 1975(as amended in 2013 by SI 210 1198)?</label>
+                    <select id="criminal_record" name="criminal_record" class="form-input w-full">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 
+                <div>
+                    <label for="criminal_proceedings" class="block font-medium">To your knowledge, are you currently the
+                        subject of any criminal proceedings (for example, charged or summoned but not yet dealt with) or
+                        any police investigation?</label>
+                    <select id="criminal_proceedings" name="criminal_proceedings" class="form-input w-full">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 
+                <div>
+                    <label for="criminal_details" class="block font-medium">If you have answered YES to any of the
+                        questions above, please give further details.</label>
+                    <textarea id="criminal_details" name="criminal_details" class="form-input w-full"></textarea>
+                </div>
 
-            <div>
-                <label for="driving_license" class="block font-medium">To your knowledge, are you currently the subject
-                    of any criminal proceedings (for example, charged or summoned but not yet dealt with) or any police
-                    investigation?</label>
-                <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-    
-    <!-- Add other driving history fields -->
-
-
-    <div>
-        <label for="driving_license" class="block font-medium">If you have answered YES to any of the questions above,
-            please give further details.</label>
-
-        <textarea
-            class="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
-            placeholder=" "></textarea>
-
-
-    </div>
-    <div>
-        <label for="driving_license" class="block font-medium">Do you consent to our applying for an enhanced criminal
-            records disclosure on you and to our retaining a copy of your disclosure certificate during the period of
-            your employment or until a new disclosure is completed (whichever occurs first)?</label>
-        <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-    <!-- Add other driving history fields -->
-    
-
-    <h2 class="text-xl font-bold mb-2 mt-8">SUITABILITY FOR THE JOB</h2>
-
-    <div>
-
-        <div>
-            <label for="driving_license" class="block font-medium">Please read the care worker job description and
-                answer the following questions.
-                Have you read and understood the care worker job description?
-            </label>
-            <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-        <!-- Add other driving history fields -->
-    </div>
-    
-
-
-    <div>
-        <label for="driving_license" class="block font-medium">Do you have any health conditions that would prevent you
-            from meeting these intrinsic requirements for which the company might need to make reasonable adjustments?
-            (If yes, please be aware that we may need to discuss these with you at your interview)</label>
-        <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-    </div>
-    <div>
-        <label for="driving_license" class="block font-medium">If you answered ‘yes’, please provide brief
-            details.</label>
-
-        <textarea
-            class="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
-            placeholder=" "></textarea>
-
-
-    </div>
-    <!-- Add other driving history fields -->
-  
+                <div>
+                    <label for="criminal_records_disclosure" class="block font-medium">Do you consent to our applying
+                        for an enhanced criminal records disclosure on you and to our retaining a copy of your
+                        disclosure certificate during the period of your employment or until a new disclosure is
+                        completed (whichever occurs first)?</label>
+                    <select id="criminal_records_disclosure" name="criminal_records_disclosure"
+                        class="form-input w-full">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 <br>
-    <h2 class="text-xl font-bold mb-2 mt-8">EQUAL OPPORTUNITY MONITORING</h2>
+                <!-- SUITABILITY FOR THE JOB -->
+                <h2 class="text-xl font-bold mb-2 mt-8">SUITABILITY FOR THE JOB</h2>
+<br>
+                <div>
+                    <label for="job_description_understood" class="block font-medium">Please read the care worker job
+                        description and answer the following question: Have you read and understood the care worker job
+                        description?</label>
+                    <select id="job_description_understood" name="job_description_understood" class="form-input w-full">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 
+                <div>
+                    <label for="health_conditions" class="block font-medium">Do you have any health conditions that
+                        would prevent you from meeting these intrinsic requirements for which the company might need to
+                        make reasonable adjustments? (If yes, please be aware that we may need <label
+                            for="health_conditions" class="block font-medium">Do you have any health conditions that
+                            would prevent you from meeting these intrinsic requirements for which the company might need
+                            to make reasonable adjustments? (If yes, please be aware that we may need to request further
+                            information and possibly medical evidence).</label>
+                        <select id="health_conditions" name="health_conditions" class="form-input w-full">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                </div>
 
+                <div>
+                    <label for="convictions" class="block font-medium">Have you been convicted of any criminal offenses,
+                        other than those which are considered 'spent' under the Rehabilitation of Offenders Act
+                        1974?</label>
+                    <select id="convictions" name="convictions" class="form-input w-full">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
 
-    <div>
-        <label for="driving_license" class="block font-medium">Would you describe your ethnicity as any of the
-            following?</label>
-        <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-            <option value="White Irish">White Irish</option>
-            <option value="White British">White British</option>
-            <option value="White other">White other</option>
-            <option value="Mixed White and Black Caribbean">Mixed White and Black Caribbean</option>
-            <option value="Mixed White and Black African">Mixed White and Black African</option>
-            <option value="Mixed White and Black Asian">Mixed White and Black Asian</option>
-            <option value="Mixed other">Mixed other</option>
-            <option value="Black Caribbean">Black Caribbean</option>
-            <option value="Black African">Black African</option>
-            <option value="Black other">Black other</option>
-            <option value="Asian Bangladeshi">Asian Bangladeshi</option>
-            <option value="Asian Indian">Asian Indian</option>
-            <option value="Asian Pakistani">Asian Pakistani</option>
-            <option value="Asian Chinese">Asian Chinese</option>
-            <option value="Asian other">Asian other</option>
-        </select>
+                <div>
+                    <label for="convictions_details" class="block font-medium">If YES, please give details including
+                        date(s) and nature of the offense(s).</label>
+                    <textarea id="convictions_details" name="convictions_details" class="form-input w-full"></textarea>
+                </div>
+
+                <!-- EMPLOYMENT HISTORY -->
+                <h2 class="text-xl font-bold mb-2 mt-8">EMPLOYMENT HISTORY</h2>
+<br>
+                <div>
+                    <label for="previous_employer" class="block font-medium">Previous Employer</label>
+                    <input id="previous_employer" type="text" name="previous_employer" class="form-input w-full">
+                </div>
+
+                <div>
+                    <label for="previous_job_title" class="block font-medium">Previous Job Title</label>
+                    <input id="previous_job_title" type="text" name="previous_job_title" class="form-input w-full">
+                </div>
+
+                <div>
+                    <label for="previous_employment_dates" class="block font-medium">Dates of Previous
+                        Employment</label>
+                    <input id="previous_employment_dates" type="text" name="previous_employment_dates"
+                        class="form-input w-full">
+                </div>
+
+                <div>
+                    <label for="reason_for_leaving" class="block font-medium">Reason for Leaving</label>
+                    <input id="reason_for_leaving" type="text" name="reason_for_leaving" class="form-input w-full">
+                </div>
+
+                <!-- REFERENCES -->
+               
+                <h2 class="text-xl font-bold mb-2 mt-8">REFERENCES</h2>
+<br>
+                <div>
+                    <label for="referee_name" class="block font-medium">Referee Name</label>
+                    <input id="referee_name" type="text" name="referee_name" class="form-input w-full">
+                </div>
+
+                <div>
+                    <label for="referee_position" class="block font-medium">Referee Position</label>
+                    <input id="referee_position" type="text" name="referee_position" class="form-input w-full">
+                </div>
+
+                <div>
+                    <label for="referee_contact" class="block font-medium">Referee Contact Information</label>
+                    <input id="referee_contact" type="text" name="referee_contact" class="form-input w-full">
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <!-- SUBMIT BUTTON -->
+
+            </div>
+            <button type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-8">Submit</button>
     </div>
-
-
-    <div>
-        <label for="driving_license" class="block font-medium">Would you describe yourself to have any
-            disability?</label>
-        <select id="criminalrecord" name="criminalrecord" class="form-input w-full">
-            <option value="Blind/Partially sighted">Blind/Partially sighted</option>
-            <option value="Deaf">Deaf</option>
-            <option value="Dyslexia">Dyslexia</option>
-            <option value="Wheelchair use">Wheelchair use</option>
-            <option value="Other mobility problems">Other mobility problems</option>
-            <option value="Unseen disability">Unseen disability</option>
-            <option value="Unseen disability">Other form of disability. </option>
-
-        </select>
     </div>
-    <!-- Add other driving history fields -->
-   
-
-
-
-
-    <!-- Add fields for criminal record -->
-    <!-- DECLARATIONS -->
-    <br>
-    <h2 class="text-xl font-bold mb-2 mt-8">DECLARATIONS</h2>
-
-    <div>
-        <label for="driving_license" class="block font-medium">Enter your Full Name Date (your name act as digital
-            signature)</label>
-
-        <textarea
-            class="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50"
-            placeholder=" "></textarea>
-
-
-    </div>
-    </div>
-
-    <div>
-
-    <div>
-
-    <!-- SUBMIT BUTTON -->
-    <button type="submit"
-        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-8">Submit</button>
-    </div>
-
-    </div>
-</div>
     </form>
     </div>
 
