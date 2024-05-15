@@ -1,4 +1,35 @@
 <?php
+
+
+// Function to send email with form data
+function sendEmail($formData) {
+    // Change these variables to your own email settings
+    $to = "codewithcrest@gmail.com";
+    $subject = "New Job Application Form Submission";
+    
+    // Construct the email message
+    $message = "New Job Application Form Submission:\n\n";
+    foreach ($formData as $key => $value) {
+        $message .= ucfirst(str_replace('_', ' ', $key)) . ": " . $value . "\n";
+    }
+    
+    // Additional headers
+    $headers = "From: sender@example.com\r\n";
+    
+    // Send the email
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Email sent successfully!";
+    } else {
+        echo "Failed to send email.";
+    }
+}
+
+// Example usage:
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Call the sendEmail function with the form data
+    sendEmail($_POST);
+}
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -73,6 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$title', '$first_name', '$middle_name', '$last_name', '$gender', '$dob', '$address', '$address_line_1', '$address_line_2', '$city', '$state', '$zip', '$country', '$phone', '$other_phone', '$email', '$nin', '$file_upload', '$how_hear', '$entitled_work', '$provided_documents', '$nationality', '$relocate', '$recent_care_home', '$hourly_pay', '$driving_license', '$criminal_record', '$criminal_proceedings', '$criminal_details', '$criminal_records_disclosure', '$job_description_understood', '$health_conditions', '$convictions', '$convictions_details', '$previous_employer', '$previous_job_title', '$previous_employment_dates', '$reason_for_leaving', '$referee_name', '$referee_position', '$referee_contact')";
 
     if ($conn->query($sql) === TRUE) {
+        header("location: ./success.html");
         echo "Application submitted successfully!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -82,34 +114,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close connection
 $conn->close();
 
-
-// Function to send email with form data
-function sendEmail($formData) {
-    // Change these variables to your own email settings
-    $to = "recipient@example.com";
-    $subject = "New Job Application Form Submission";
-    
-    // Construct the email message
-    $message = "New Job Application Form Submission:\n\n";
-    foreach ($formData as $key => $value) {
-        $message .= ucfirst(str_replace('_', ' ', $key)) . ": " . $value . "\n";
-    }
-    
-    // Additional headers
-    $headers = "From: sender@example.com\r\n";
-    
-    // Send the email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Email sent successfully!";
-    } else {
-        echo "Failed to send email.";
-    }
-}
-
-// Example usage:
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Call the sendEmail function with the form data
-    sendEmail($_POST);
-}
 
 
